@@ -5,30 +5,15 @@ from math import*
 from sys import*
 
 ###################CONSTANTS#####################                                                                                                            
-yr=365.25;"Days";
 N=3.0
 
-Piu=15.0;"hours";
-Oini=2*pi/((Piu/24.0)/YEAR);"initial rotational rate of the planet";
-
-fc=66463579.13
-G=1;"Ul+3Um-1Ut-2";
-Msat=1.913031456E8;"Um";
-Msun=6.694398379E11;"Um";
-Mencel=1.08*(33.658798);"Um";
 AU=2568.9976;"Ul";
-Gyear=1e9;"Yr";
 t0=1e8;"Yr";
-GR=0.2;"None";
-Rsat=1.0
-DensPart=fc*3.0;"Um Ul-3";
-fac=9.14;"Ratio between the radii of saturn and earth";
 
 ##########################PARAMETERS############################
 
 #INPUT PARAMETERS                                                                                                                                
 
-Msu=1.0;"Stellar mass (Msun)";
 amu=3.5;"Initial moon position (Rp)";
 tsu=80.0;"Planet orbital period (Days)";
 alph=0.219;"alpha of Saturn";
@@ -56,34 +41,6 @@ Mps=np.linspace(Minip,Maxip,N);"Planet Mass (Msat)";
 Mms=np.linspace(Minim,Maxim,N);"Moon Mass (Mencel)";
 MMS,MPS=np.meshgrid(Mms,Mps)
 
-#ROUTINE'S ARGUMENTS                                                                                                                                         
-
-Ms=Msu*Msun
-Mp=MPS*Msat
-Mm=MMS*Mencel
-am=amu*1.0 # *Rsat
-P=tsu/YEAR
-
-###############################################
-#ORBITAL MEAN MOTION OF THE PLANET
-###############################################
-npl=(2*pi)/P
-ap=((G*Ms)/npl**(2.0))**(1.0/3.0)
-
-###############################################
-#ROCHE RADIUS
-###############################################
-
-DensP=(3.0*Mp)/(4*pi*Rsat**(3.0))
-B1=(DensP/DensPart)**(1.0/3.0)
-ar=2.0*B1*Rsat
-nroche=((G*Mp)/ar**3.0)**0.5
-
-##################################
-#PARAMETERS
-##################################
-Nts=100;"total integration time";
-dt=0.001;"time-step";
 
 ############################
 #INITIAL CONDITIONS
