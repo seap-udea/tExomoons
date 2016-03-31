@@ -16,10 +16,10 @@ from sys import *
 PI=pi
 
 #PHYSICAL CONSTANTS
-MIN=60.0 # s
-HOUR=60.0*MIN # s
-DAY=24*HOUR # s
-YEAR=365.25*DAY # s
+MIN=const.minute # s
+HOUR=const.hour # s
+DAY=const.day # s
+YEAR=const.year # s
 MYEAR=YEAR**8.0 # s
 GYEAR=YEAR**9.0 # s
 GCONST=const.G # m^3 / kg s^2
@@ -27,7 +27,7 @@ GR=0.2 # None
 DensPart=3000 # kg / m^3
 
 #ASTRONOMICAL CONSTANTS
-AU=1.496e11 # m
+AU=const.au # m
 MSUN=1.99e30 # kg
 MENCEL=1.08e20 # kg
 MSAT=5.683e26 # kg
