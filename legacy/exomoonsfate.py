@@ -9,7 +9,7 @@ yr=365.25;"Days";
 N=3.0
 
 Piu=15.0;"hours";
-Oini=2*pi/((Piu/24.0)/yr);"initial rotational rate of the planet";
+Oini=2*pi/((Piu/24.0)/YEAR);"initial rotational rate of the planet";
 
 fc=66463579.13
 G=1;"Ul+3Um-1Ut-2";
@@ -62,7 +62,7 @@ Ms=Msu*Msun
 Mp=MPS*Msat
 Mm=MMS*Mencel
 am=amu*1.0 # *Rsat
-P=tsu/yr
+P=tsu/YEAR
 
 ###############################################
 #ORBITAL MEAN MOTION OF THE PLANET
@@ -433,7 +433,7 @@ Ms=Msu*Msun
 am=amu*Rp
 Mp=MPS*Msat
 Mm=MMS*Mencel
-P=tsu/yr
+P=tsu/YEAR
 
 #FINALLY WE GET THE ROUND-TRIP TIMESCALE
 
@@ -533,7 +533,7 @@ tps=np.linspace(tinip,tmaxp,100)
 ams=np.linspace(ainim,amaxim,100)
 AMS,TPS=np.meshgrid(ams,tps)
 
-P=TPS/yr
+P=TPS/YEAR
 am=AMS*Rp
 
 #FINALLY WE GET THE ROUND-TRIP TIMESCALE
@@ -749,7 +749,7 @@ Rp=Rpp
 Ms=Msu*Msun
 am=amu*Rp
 Mm=mmu*Mencel
-P=PP/yr
+P=PP/YEAR
 
 #FINALLY WE GET THE ROUND-TRIP TIMESCALE
 
@@ -905,7 +905,7 @@ Rp=Rpp
 Ms=Msu*Msun
 am=amu*Rp
 Mm=mmu*Mencel
-P=PP/yr
+P=PP/YEAR
 
 #FINALLY WE GET THE ROUND-TRIP TIMESCALE
 
