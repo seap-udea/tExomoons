@@ -4,16 +4,10 @@ from scipy.integrate import odeint
 from math import*
 from sys import*
 
-###################CONSTANTS#####################                                                                                                            
+###################CONSTANTS#####################
 N=3.0
 
-AU=2568.9976;"Ul";
-t0=1e8;"Yr";
-
-##########################PARAMETERS############################
-
-#INPUT PARAMETERS                                                                                                                                
-
+#INPUT PARAMETERS
 amu=3.5;"Initial moon position (Rp)";
 tsu=80.0;"Planet orbital period (Days)";
 alph=0.219;"alpha of Saturn";
@@ -23,7 +17,7 @@ A=3.964
 B=-0.064
 C=3.364
 
-#######COEFICIENTS FROM THE SCALE-LAW FOR THE PLANET'S TIDAL QUALITY FACTOR                                                                                  
+#######COEFICIENTS FROM THE SCALE-LAW FOR THE PLANET'S TIDAL QUALITY FACTOR
 kpp=259.179864469
 bp=4.0
 delta=-0.231999999999998

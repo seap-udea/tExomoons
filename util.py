@@ -20,6 +20,7 @@ MIN=60.0 # s
 HOUR=60.0*MIN # s
 DAY=24*HOUR # s
 YEAR=365.25*DAY # s
+MYEAR=YEAR**8.0 # s
 GYEAR=YEAR**9.0 # s
 GCONST=const.G # m^3 / kg s^2
 GR=0.2 # None
@@ -48,7 +49,7 @@ dt=0.001*GYEAR
 
 #PARAMETERS
 PR=15.0*HOUR # s
-PO=70.0*DAYS # s
+PO=70.0*DAY # s
 MS=1.0*MSUN # kg
 MP=1.0*MSAT # kg
 MM=10.0*MENCEL # kg
